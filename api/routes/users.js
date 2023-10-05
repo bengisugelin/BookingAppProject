@@ -4,6 +4,8 @@ import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
+
+/*
 //Check Authentication
 router.get("/checkauthentication", verifyToken, (req, res, next)=>{
 
@@ -23,18 +25,20 @@ router.get("/checkadmin/:id", verifyAdmin, (req, res, next)=>{
     res.send("Hello admin, You are logged in  and you can delete your account")
 });
 
+*/
+
 
 //UPDATE
-router.put("/:id", updateUser);
+router.put("/:id",verifyUser, updateUser);
 
 //DELETE
-router.delete("/:id", deleteUser);
+router.delete("/:id",verifyUser, deleteUser);
 
 //GET
-router.get("/:id", getUser);
+router.get("/:id",verifyUser, getUser);
 
 //GET ALL
-router.get("/", getAllUsers);
+router.get("/",verifyAdmin, getAllUsers);
 
 
 export default router
