@@ -4,8 +4,8 @@
 
 .navbar{
     top: 0;
-    height: 70px;
-    background-color: rgb(62, 27, 95);
+    height: 60px;
+    background-color: #0b4b82;
     display:flex;
     justify-content:center;
 }
@@ -28,7 +28,8 @@
 .navButton{
     margin-left: 20px;
     border: none;
-    padding: 5px 10px;
+    border-radius: 5px;
+    padding: 10px 10px;
     cursor: pointer;
-    color: rgb(62, 27, 95);
+    color: #0b4b82;
 }
