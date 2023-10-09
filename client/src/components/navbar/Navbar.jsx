@@ -1,6 +1,5 @@
 import React from "react";
 import "./navbar.css"
-import backgroundImage from "../../images/seaandsand.jpg";
 
 const Navbar = ()=> {
     return(
